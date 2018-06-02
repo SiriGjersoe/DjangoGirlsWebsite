@@ -7,6 +7,13 @@
 
 <h1> <strong>This blog is just starting! </strong></h1>
 
+{% for post in posts %}
+<div>
+  <p>published: {{ post.publsihed_date }}</p>
+  <h1><a href="">{{ post.title }} </a> </h>
+    <p> {{ post.text|linebreaksbr }} </p>
+</div>
+{% endfor %}‚
 
   <p>Hi there!<p>
     <p> Acknowledgments: Thank you Lusy!<p>
