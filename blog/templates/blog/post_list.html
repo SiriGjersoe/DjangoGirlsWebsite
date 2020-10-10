@@ -1,21 +1,25 @@
+{% load staticfiles %}
 <html>
-<head>
-  <title> Blog</title>
-</head>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        <h1> <strong>This blog is just starting! </strong></h1>
+        </div>
 
-<body>
-
-<h1> <strong>This blog is just starting! </strong></h1>
-
-{% for post in posts %}
-<div>
-  <p>published: {{ post.publsihed_date }}</p>
-  <h1><a href="">{{ post.title }} </a> </h>
-    <p> {{ post.text|linebreaksbr }} </p>
-</div>
-{% endfor %}‚
-
-  <p>Hi there!<p>
+        {% for post in posts %}
+            <div>
+               <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+   <p>Hi there!<p>
     <p> Acknowledgments: Thank you Lusy!<p>
 
 <div>
@@ -23,4 +27,9 @@ First section
 </div>
 
 <a href="https://home.uni-leipzig.de/gjersoe/">link</a>
-</body>
+
+        </body>
+</html>
+
+
+
