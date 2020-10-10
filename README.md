@@ -1,1 +1,1 @@
-# DjangoGirlsWebsite
+# DjangoGirlsWebsite: http://sirigjersoe.pythonanywhere.com/
