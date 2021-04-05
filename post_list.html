@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        <h1> <strong>Siri Gjersoe - Computational Linguist</strong><br> Ph.D in Linguistics</h1>
+        </div>
+
+        {% for post in posts %}
+            <div>
+               <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+   <p> <ul> </ul> !<p>
+
+
+     <ul>
+       <li>I am a Computational Linguist working in Natural Langugage Processing</li>
+       <li>My interests are in Phonetics, Phonology, and Machine Learning</li>
+       <li>I am currently develelopping Norwegian in the automotive industry </li>
+     </ul>
+
+
+
+
+
+
+  <p>  This Website was created for reasons of learning  <a href="https://tutorial.djangogirls.org/en/">Django </a>
+    <br> For my personal website, please visit <a href="https://gjersoe.weebly.com/">My Website</a> <p>
+        </body>
+</html>
